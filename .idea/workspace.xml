@@ -4,17 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cd9b50c-992d-47af-a843-ca81254a5677" name="Changes" comment="Added service Interface Greeting">
-      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/org/example/consumer/Consumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provider/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provider/src/main/java/org/example/provider/SouthernGreeting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provider/src/main/java/org/example/provider/WesternGreeting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/module-info.java" afterDir="false" />
+    <list default="true" id="4cd9b50c-992d-47af-a843-ca81254a5677" name="Changes" comment="added module.info">
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/org/example/provider/EasternGreeting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/org/example/provider/NorthernGreeting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer/src/main/java/org/example/consumer/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/main/java/org/example/consumer/Consumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/java/org/example/provider/SouthernGreeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/org/example/provider/SouthernGreeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/java/org/example/provider/WesternGreeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/org/example/provider/WesternGreeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/org/example/service/Greeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/org/example/service/Greeting.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="module-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,6 +66,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "vcs.Git",
     "vue.rearranger.settings.migration": "true"
   }
@@ -80,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681992744000</updated>
-      <workItem from="1681992745772" duration="4039000" />
+      <workItem from="1681992745772" duration="21173000" />
     </task>
     <task id="LOCAL−00001" summary="Initial commit">
       <created>1681993654127</created>
@@ -94,7 +100,13 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1681994162811</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="added module.info">
+      <created>1682066932037</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1682066932037</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +126,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Added service Interface Greeting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added service Interface Greeting" />
+    <MESSAGE value="added module.info" />
+    <option name="LAST_COMMIT_MESSAGE" value="added module.info" />
   </component>
 </project>

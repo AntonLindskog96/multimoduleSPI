@@ -4,7 +4,7 @@ import org.example.service.Greeting;
 
 public class WesternGreeting implements Greeting {
     @Override
-    public String sayHello() {
+    public String nationalGreet() {
         return "Hallå eller";
     }
 
