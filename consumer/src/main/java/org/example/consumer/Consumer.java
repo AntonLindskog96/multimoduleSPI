@@ -71,9 +71,9 @@ public class Consumer {
                 --------------------------------------------------------------
                 Choose a direction and u will recieve a phrase.
                 1. North
-                2. West
-                3. East
-                4. South
+                2. South
+                3. West
+                4. East
                 5. Exit
                 --------------------------------------------------------------
                 """);
