@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cd9b50c-992d-47af-a843-ca81254a5677" name="Changes" comment="minor changes">
+    <list default="true" id="4cd9b50c-992d-47af-a843-ca81254a5677" name="Changes" comment="added Target and Retention">
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/org/example/provider/AnnotatedGreeting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer/src/main/java/org/example/consumer/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/main/java/org/example/consumer/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/java/org/example/provider/EasternGreeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/org/example/provider/EasternGreeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/java/org/example/provider/NorthernGreeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/org/example/provider/NorthernGreeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/java/org/example/provider/SouthernGreeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/org/example/provider/SouthernGreeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/java/org/example/provider/WesternGreeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/org/example/provider/WesternGreeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/org/example/service/Greeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/org/example/service/Greeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/org/example/service/chosenGreeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/org/example/service/annotation/Language.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,31 +53,66 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/linds/IdeaProjects/SPI/service/src/main/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/linds/IdeaProjects/SPI/consumer&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "19",
+    "last_directory_selection": "C:/Users/linds/IdeaProjects/SPI/service/src/main/java",
+    "last_opened_file_path": "C:/Users/linds/IdeaProjects/SPI/consumer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "terminal",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\linds\IdeaProjects\SPI\consumer" />
     </key>
+  </component>
+  <component name="RunManager" selected="Docker.Dockerfile">
+    <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.consumer.Consumer" />
+      <module name="consumer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.consumer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="Application.Consumer" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -77,7 +124,9 @@
       <updated>1681992744000</updated>
       <workItem from="1681992745772" duration="24714000" />
       <workItem from="1682348792816" duration="18000" />
-      <workItem from="1682405077499" duration="294000" />
+      <workItem from="1682405077499" duration="3889000" />
+      <workItem from="1682409050469" duration="982000" />
+      <workItem from="1682410079581" duration="11168000" />
     </task>
     <task id="LOCAL−00001" summary="Initial commit">
       <created>1681993654127</created>
@@ -115,7 +164,19 @@
       <option name="presentableId" value="LOCAL−00006" />
       <updated>1682346539387</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="minor changes">
+      <created>1682405455364</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1682405455364</updated>
+    </task>
+    <task id="LOCAL−00008" summary="added Target and Retention">
+      <created>1682419901636</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1682419901636</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +199,11 @@
     <MESSAGE value="added module.info" />
     <MESSAGE value="added code for printing phrases" />
     <MESSAGE value="minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
+    <MESSAGE value="added Target and Retention" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Target and Retention" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

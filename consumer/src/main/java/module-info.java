@@ -1,5 +1,4 @@
-module org.example.consumer {
+module consumer {
 requires org.example.service;
-    requires org.example.provider;
     uses org.example.service.Greeting;
 }

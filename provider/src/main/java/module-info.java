@@ -7,6 +7,5 @@ import org.example.service.Greeting;
 module org.example.provider {
     exports org.example.provider;
     requires org.example.service;
-
     provides Greeting with SouthernGreeting, WesternGreeting, NorthernGreeting, EasternGreeting;
 }

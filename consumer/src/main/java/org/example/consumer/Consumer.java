@@ -1,77 +1,84 @@
 package org.example.consumer;
-
-import org.example.provider.EasternGreeting;
-import org.example.provider.NorthernGreeting;
-import org.example.provider.SouthernGreeting;
-import org.example.provider.WesternGreeting;
 import org.example.service.Greeting;
+import org.example.service.annotation.Language;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.lang.reflect.InvocationTargetException;
+import java.util.List;
 import java.util.Scanner;
 import java.util.ServiceLoader;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 
 public class Consumer {
+    private static final Scanner scanner = new Scanner(System.in);
+    private static String input;
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            printMenu();
-            switch (scanner.nextLine()) {
-                case "1" -> NorthernPrint();
-                case "2" -> SouthernGreeting();
-                case "3" -> WesternGreeting();
-                case "4" -> EasternGreeting();
-                case "5" -> System.exit(0);
-            }
-        }
-    }
-    private static void NorthernPrint() {
+    public static void main(String[] args) throws InvocationTargetException, IllegalAccessException, IOException, NoSuchMethodException, InstantiationException {
+
         ServiceLoader<Greeting> greetings = ServiceLoader.load(Greeting.class);
-        for (var greeting : greetings) {
-            if ( greeting instanceof NorthernGreeting) {
-                System.out.println(greeting.nationalGreet());
-                break;
-            }
+
+        for ( var greeting : greetings) {
+            System.out.println(greeting.nationalGreet());
         }
-    }
-    private static void SouthernGreeting() {
-        ServiceLoader<Greeting> greetings = ServiceLoader.load(Greeting.class);
-        for (var greeting : greetings) {
-            if ( greeting instanceof SouthernGreeting) {
-                System.out.println(greeting.nationalGreet());
-                break;
-            }
-        }
-    }
-    private static void WesternGreeting() {
-        ServiceLoader<Greeting> greetings = ServiceLoader.load(Greeting.class);
-        for (var greeting : greetings) {
-            if ( greeting instanceof WesternGreeting) {
-                System.out.println(greeting.nationalGreet());
-                break;
+
+
+        Set<Class> classes = findAllClasses("org.example.provider");
+
+        for (var c : classes) {
+            var annotation = (Language) c.getAnnotation(Language.class);
+            if (annotation != null) {
+                System.out.println(annotation.value());
+                var o = c.getConstructor().newInstance();
+                var methods = c.getMethods();
+                for (var m : methods) {
+                    if (m.getReturnType().equals(String.class) && m.getParameterCount() == 0) {
+                        var s = m.invoke(o);
+                        if (s instanceof String string)
+                            System.out.println(string);
+                    }
+                }
+
             }
         }
     }
 
-    private static void EasternGreeting() {
-        ServiceLoader<Greeting> greetings = ServiceLoader.load(Greeting.class);
-        for (var greeting : greetings) {
-            if ( greeting instanceof EasternGreeting) {
-                System.out.println(greeting.nationalGreet());
-                break;
-            }
-        }
+    private static Set<Class> findAllClasses(String packageName) throws IOException {
+        InputStream stream = ClassLoader.getSystemClassLoader()
+                .getResourceAsStream(packageName.replaceAll("[.]", "/"));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+        return reader.lines()
+                .filter(line -> line.endsWith(".class"))
+                .map(line -> getClass(line, packageName))
+                .collect(Collectors.toSet());
     }
-    private static void printMenu() {
-        System.out.println("""
-                --------------------------------------------------------------
-                Choose a direction and u will recieve a phrase.
-                1. North
-                2. South
-                3. West
-                4. East
-                5. Exit
-                --------------------------------------------------------------
-                """);
+
+    private static Class getClass(String className, String packageName) {
+        try {
+            return Class.forName(packageName + "."
+                    + className.substring(0, className.lastIndexOf('.')));
+        } catch (ClassNotFoundException e) {
+            // handle the exception
+        }
+        return null;
     }
 }
+
+
+/*        private static List<Greeting> get(String annotationType){
+            return ServiceLoader.load(Greeting.class)
+                    .stream()
+                    .filter(c -> c.type().isAnnotationPresent(Language.class)
+                            && c.type().getAnnotation(Language.class)
+                            .value()
+                            .equals(annotationType))
+                    .map(ServiceLoader.Provider::get)
+                    .toList();
+        }*/
+
+
+
