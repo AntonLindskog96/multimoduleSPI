@@ -17,16 +17,15 @@ public class Consumer {
         while (true) {
             printMenu();
             switch (scanner.nextLine()) {
-                case "1" -> NorthernPrint(scanner);
-                case "2" -> SouthernGreeting(scanner);
-                case "3" -> WesternGreeting(scanner);
-                case "4" -> EasternGreeting(scanner);
+                case "1" -> NorthernPrint();
+                case "2" -> SouthernGreeting();
+                case "3" -> WesternGreeting();
+                case "4" -> EasternGreeting();
                 case "5" -> System.exit(0);
             }
         }
     }
-
-    private static void NorthernPrint(Scanner scanner) {
+    private static void NorthernPrint() {
         ServiceLoader<Greeting> greetings = ServiceLoader.load(Greeting.class);
         for (var greeting : greetings) {
             if ( greeting instanceof NorthernGreeting) {
@@ -35,8 +34,7 @@ public class Consumer {
             }
         }
     }
-
-    private static void SouthernGreeting(Scanner scanner) {
+    private static void SouthernGreeting() {
         ServiceLoader<Greeting> greetings = ServiceLoader.load(Greeting.class);
         for (var greeting : greetings) {
             if ( greeting instanceof SouthernGreeting) {
@@ -45,8 +43,7 @@ public class Consumer {
             }
         }
     }
-
-    private static void WesternGreeting(Scanner scanner) {
+    private static void WesternGreeting() {
         ServiceLoader<Greeting> greetings = ServiceLoader.load(Greeting.class);
         for (var greeting : greetings) {
             if ( greeting instanceof WesternGreeting) {
@@ -56,7 +53,7 @@ public class Consumer {
         }
     }
 
-    private static void EasternGreeting(Scanner scanner) {
+    private static void EasternGreeting() {
         ServiceLoader<Greeting> greetings = ServiceLoader.load(Greeting.class);
         for (var greeting : greetings) {
             if ( greeting instanceof EasternGreeting) {
@@ -65,7 +62,6 @@ public class Consumer {
             }
         }
     }
-
     private static void printMenu() {
         System.out.println("""
                 --------------------------------------------------------------
